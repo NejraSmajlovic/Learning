@@ -13,8 +13,11 @@ int main() {
 
     // Omoguciti da se ne mogu unijeti negativni brojevi
     int x;
-    cout << "Unesite clan Fibonacci niza: ";
-    cin >> x;
+    do {
+        cout << "Unesite clan Fibonacci niza: ";
+        cin >> x;
+        if(x < 0) cout << "[GREKSA]\n";
+    } while(x < 0);
 
     cout << Fib(x);
 
